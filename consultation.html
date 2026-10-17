@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Consultation | DPI Consultants</title>
+  <meta name="description" content="Your Next Chapter Starts Here. Book a consultation with DPI Consultants to discuss your academic background, preferred destinations, intended subject, and future goals." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="DPI Consultants Home">
+        <div class="brand-monogram">DPI</div>
+        <div class="brand-text">
+          <span class="brand-name">DPI Consultants</span>
+          <span class="brand-division">Premium Student Division</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="admissions.html" class="nav-link">University Admissions</a>
+        <a href="scholarships.html" class="nav-link">Scholarships &amp; Funding</a>
+        <a href="profile-building.html" class="nav-link">Profile &amp; Portfolio</a>
+        <a href="about.html" class="nav-link">About DPI</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="consultation.html" class="btn btn-primary btn-sm">
+          Book a Consultation <span class="btn-arrow">&rarr;</span>
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <span class="eyebrow">Book a Consultation</span>
+          <h1 class="display-xl">Your Next Chapter Starts Here.</h1>
+          <p class="hero-subtitle-serif">Let&rsquo;s Talk About Your Ambitions.</p>
+          <div class="page-hero-lead">
+            <p>
+              Whether you are aiming for a highly selective university, searching for scholarship opportunities, or looking to strengthen your profile before applying, the first step is understanding where you stand and where you want to go.
+            </p>
+            <p>
+              Book a consultation with our team to discuss your academic background, preferred destinations, intended subject, and future goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation Main Content -->
+    <section class="section">
+      <div class="container consultation-layout">
+
+        <!-- Left Column: What We'll Discuss & Starting Point -->
+        <div>
+          <div class="discuss-card">
+            <span class="eyebrow">Session Agenda</span>
+            <h2 class="heading-lg">What We&rsquo;ll Discuss</h2>
+
+            <ul class="discuss-list">
+              <li class="discuss-item">
+                <span class="discuss-item-num">01</span>
+                <span>Your current qualifications and academic background.</span>
+              </li>
+              <li class="discuss-item">
+                <span class="discuss-item-num">02</span>
+                <span>Your preferred countries, universities, and programmes.</span>
+              </li>
+              <li class="discuss-item">
+                <span class="discuss-item-num">03</span>
+                <span>Potential scholarship and financial aid opportunities.</span>
+              </li>
+              <li class="discuss-item">
+                <span class="discuss-item-num">04</span>
+                <span>Areas for profile or portfolio development.</span>
+              </li>
+              <li class="discuss-item">
+                <span class="discuss-item-num">05</span>
+                <span>Application timelines and practical next steps.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="starting-point-box">
+            <h3>A More Informed Starting Point</h3>
+            <p>
+              Our consultations are designed to help you understand your options and identify a suitable direction. Recommendations depend on your individual circumstances, eligibility, and available opportunities.
+            </p>
+            <p class="lead-serif" style="color: var(--navy-900); font-size: 1.3rem; margin-bottom: 0;">
+              Ready to explore your possibilities?
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Consultation Form -->
+        <div class="booking-form-card">
+          <div style="margin-bottom: 1.5rem;">
+            <span class="eyebrow">Personalised Consultation Request</span>
+            <h2 class="heading-md">Tell Us About Your Goals</h2>
+          </div>
+
+          <form id="consultationForm">
+            <input type="hidden" id="applicantRole" name="applicantRole" value="Student" />
+
+            <!-- Student / Parent Switcher -->
+            <div class="form-role-tabs" role="tablist" aria-label="Applicant Role">
+              <button type="button" class="role-tab active" data-role="Student">I am a Student</button>
+              <button type="button" class="role-tab" data-role="Parent / Guardian">I am a Parent / Guardian</button>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name *</label>
+                <input class="form-control" type="text" id="fullName" name="fullName" placeholder="e.g., Ayesha Khan" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone / WhatsApp Number *</label>
+                <input class="form-control" type="tel" id="phone" name="phone" placeholder="+92 300 0000000" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address *</label>
+                <input class="form-control" type="email" id="email" name="email" placeholder="name@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="city">City in Pakistan</label>
+                <input class="form-control" type="text" id="city" name="city" placeholder="e.g., Lahore, Karachi, Islamabad" />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="qualification">Current Academic Background *</label>
+                <select class="form-control" id="qualification" name="qualification" required>
+                  <option value="" disabled selected>Select current stage</option>
+                  <option value="O-Levels / IGCSE">O-Levels / IGCSE</option>
+                  <option value="AS / A-Levels">AS / A-Levels</option>
+                  <option value="International Baccalaureate (IB)">International Baccalaureate (IB)</option>
+                  <option value="Matric / Intermediate (FSc / FA / ICS)">Matric / Intermediate (FSc / FA / ICS)</option>
+                  <option value="Undergraduate Student (Seeking Postgraduate)">Undergraduate Student</option>
+                  <option value="Gap Year / Other">Gap Year / Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="intakeYear">Target Intake Cycle</label>
+                <select class="form-control" id="intakeYear" name="intakeYear">
+                  <option value="Fall 2027">Fall / Autumn 2027</option>
+                  <option value="Spring 2027">Spring 2027</option>
+                  <option value="Fall 2028">Fall / Autumn 2028</option>
+                  <option value="Early Planning (2029+)">Early Profile Planning (2029+)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Preferred Study Destinations</label>
+              <div class="chip-selector">
+                <label class="chip-option">
+                  <input type="checkbox" name="destination" value="United States (Ivy League & Selective US)" checked />
+                  <span class="chip-box">United States (US)</span>
+                </label>
+                <label class="chip-option">
+                  <input type="checkbox" name="destination" value="United Kingdom (Russell Group & UK)" />
+                  <span class="chip-box">United Kingdom (UK)</span>
+                </label>
+                <label class="chip-option">
+                  <input type="checkbox" name="destination" value="Both USA & UK" />
+                  <span class="chip-box">Exploring Both US &amp; UK</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">What Would You Like to Explore?</label>
+              <div class="chip-selector">
+                <label class="chip-option">
+                  <input type="checkbox" name="focusArea" value="Global University Admissions" checked />
+                  <span class="chip-box">University Admissions Strategy</span>
+                </label>
+                <label class="chip-option">
+                  <input type="checkbox" name="focusArea" value="Scholarships & Financial Aid" />
+                  <span class="chip-box">Scholarships &amp; Financial Aid</span>
+                </label>
+                <label class="chip-option">
+                  <input type="checkbox" name="focusArea" value="Profile & Portfolio Building" />
+                  <span class="chip-box">Profile &amp; Portfolio Building</span>
+                </label>
+                <label class="chip-option">
+                  <input type="checkbox" name="focusArea" value="Common App / UCAS Guidance" />
+                  <span class="chip-box">Common App &amp; UCAS Support</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="intendedSubject">Intended Subject, Major, or Academic Direction</label>
+              <input class="form-control" type="text" id="intendedSubject" name="intendedSubject" placeholder="e.g., Computer Science, Economics, Engineering, Architecture, Undecided" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="goals">Your Ambitions, Questions, or Target Universities (Optional)</label>
+              <textarea class="form-control" id="goals" name="goals" rows="3" placeholder="Tell us where you want to go, what you want to study, and what you hope to achieve..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+              Book Your Personalised Consultation <span class="btn-arrow">&rarr;</span>
+            </button>
+          </form>
+
+          <!-- Confirmation State -->
+          <div id="formSuccessPanel" class="form-success-panel" aria-live="polite">
+            <div class="success-icon-ring">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="heading-md" style="margin-bottom: 0.5rem;">Consultation Profile Prepared</h3>
+            <p class="lead-text" style="font-size: 0.95rem;">
+              Thank you for sharing your academic ambitions. Below is your consultation brief. You can send it directly to our advisory team on WhatsApp or copy the summary.
+            </p>
+
+            <div id="consultationSummaryText" class="summary-preview-box"></div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
+              <a id="sendWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+                Send via WhatsApp <span class="btn-arrow">&rarr;</span>
+              </a>
+              <button type="button" id="copyBriefBtn" class="btn btn-outline">
+                Copy Consultation Brief
+              </button>
+              <button type="button" id="resetConsultationBtn" class="btn btn-outline btn-sm">
+                Edit Details
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-monogram">DPI</div>
+            <div class="brand-text">
+              <span class="brand-name">DPI Consultants</span>
+              <span class="brand-division">Des Pardes International</span>
+            </div>
+          </a>
+          <p>
+            Personalised global university admissions guidance, scholarship research, profile development, and strategic application planning for ambitious students in Pakistan.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Advisory Services</h4>
+          <ul class="footer-links">
+            <li><a href="admissions.html">Global University Admissions</a></li>
+            <li><a href="admissions.html#us-admissions">United States Admissions</a></li>
+            <li><a href="admissions.html#uk-admissions">United Kingdom Admissions</a></li>
+            <li><a href="scholarships.html">Scholarships &amp; Financial Aid</a></li>
+            <li><a href="profile-building.html">Profile &amp; Portfolio Building</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Organisation</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About DPI Consultants</a></li>
+            <li><a href="about.html#premium-division">Premium Student Division</a></li>
+            <li><a href="about.html#our-approach">Our Approach &amp; Commitment</a></li>
+            <li><a href="consultation.html">Book a Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Start a Conversation</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 1.15rem; line-height: 1.6;">
+            Ready to discuss your academic background, preferred destinations, and future goals?
+          </p>
+          <a href="consultation.html" class="btn btn-gold btn-sm">
+            Book a Consultation &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 DPI Consultants (Des Pardes International). All rights reserved.</span>
+        <span>Your Ambition. Your Edge. Your Global Future.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

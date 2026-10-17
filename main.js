@@ -22,17 +22,51 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
+    // Inject mobile CTA button into nav-links if not already present
+    if (!navLinks.querySelector('.nav-mobile-cta')) {
+      const mobileCta = document.createElement('a');
+      mobileCta.href = 'consultation.html';
+      mobileCta.className = 'btn btn-primary nav-mobile-cta';
+      mobileCta.innerHTML = 'Book a Consultation <span class="btn-arrow">&rarr;</span>';
+      navLinks.appendChild(mobileCta);
+    }
+
+    const hamburgerSvg = `
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>`;
+    const closeSvg = `
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>`;
+
+    const setMenuOpen = (isOpen) => {
+      navLinks.classList.toggle('open', isOpen);
       menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.innerHTML = isOpen ? closeSvg : hamburgerSvg;
+    };
+
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = !navLinks.classList.contains('open');
+      setMenuOpen(isOpen);
     });
 
     // Close menu when clicking a link
     navLinks.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
+        setMenuOpen(false);
       });
+    });
+
+    // Close menu when tapping outside
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        setMenuOpen(false);
+      }
     });
   }
 
